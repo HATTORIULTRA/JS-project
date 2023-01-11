@@ -1,4 +1,4 @@
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {
@@ -30,5 +30,4 @@ if (personalMovieDB < 10) {
     console.log('Произошла ошибка');
 }
 
-// personalMovieDB.movies[a] = b;1`
 console.log(personalMovieDB);
