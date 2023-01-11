@@ -7,14 +7,18 @@ const personalMovieDB = {
     actors: {},
     genres: [],
     privat: false,
+};
+
+
+for(let i = 0; i < 2; i++) {
+    let a = prompt('Один из последних просмотренных фильмов?'),
+        b = prompt('На сколько оцените его?');
+    if(a != '' && b != '' && a != null && b != null && a.length < 50 && b.length < 50) {
+        personalMovieDB.movies[a] = b;
+    } else{
+        i--;
+    }
 }
 
-let a = prompt('Один из последних просмотренных фильмов?'),
-    b = prompt('На сколько оцените его?'),
-    c = prompt('Один из последних просмотренных фильмов?'),
-    d = prompt('На сколько оцените его?');
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-
+// personalMovieDB.movies[a] = b;1`
 console.log(personalMovieDB);
